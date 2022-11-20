@@ -63,13 +63,13 @@ navlinks.addEventListener('click', () => {
 //   loop:true
 // });
 // const followbtn = document.querySelector(".main #followBtn");
-// 
+//
     // followbtn.addEventListener('click', () => {
     //     //  alert(icons);
     //     icons.classList.toggle('openclass');
 
     // });
-
+  
 menubar.addEventListener('click', () => {
   navlinks.classList.toggle('open');
   // topBar.style.background = "red";
