@@ -362,20 +362,20 @@ float: left;
 h1{
   align-items: center;
   justify-content: center;
-  background-image: url(../images/Free\ Vector\ _\ Gradient\ coding\ logo\ template.jpeg);
+  background-image: url(/me.jpg);
   -webkit-background-clip: text;
    background-clip:text ;
   font-size: 48px;
   color: transparent;
   -webkit-text-stroke:2px white ;
-  font-family:fantasy;
+  font-family:cursive;
   margin-left: 10px;
   position: absolute;
    animation: anim 6s linear infinite;
   }
   @keyframes anim{
   100%{ 
-  background-position: 4000px; 
+  background-position: 40px; 
   }
 } 
   header nav{
