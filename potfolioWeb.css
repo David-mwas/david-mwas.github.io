@@ -7,6 +7,7 @@
   text-decoration: none;
 }
 body{
+  z-index: 99999;
      height: 100vh;
     scroll-snap-align: start;
     width: 100vw;
@@ -16,6 +17,22 @@ body{
     display: none;
     /* overflow: hidden; */
   }
+  .main #particles-js{
+  z-index: .9;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main::before{
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
   section{
     width: 70vw;
 
@@ -112,7 +129,12 @@ nav ul li a:hover{
 .main{
   padding-top: 160px;
   z-index: -566;
-  background-color: black;
+  /* background-color: black; */
+    background: linear-gradient(rgba(0,0,0,.898),rgba(0, 0, 0, .97)),url('../images/Pin\ by\ The\ Cosmicevolve\ !\ on\ 2nd\ skin\ co\ INDPIRACION\ _\ Galaxy\ wallpaper\,\ Galaxy\ painting\,\ Wallpaper\ space.jpeg');
+  background-position:bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  mix-blend-mode:normal;
   /* margin-top:-30px; */
   display: flex;
   flex-direction: column;
@@ -526,7 +548,7 @@ h1{
     margin: 10px auto;
     align-items: center;
     justify-content: center;
-    width: 70vw;
+    width: 80%;
    text-align: left;
     font: size 1.1875rem;
   }
@@ -599,14 +621,14 @@ position: relative;
   padding: 10px auto;
   padding-top: 20px;
   color:white;
-  height:fit-content;
+ height:fit-content;
   width: 100%;
   background-color: black;
   border-radius: 25px;
 }
 .container{
   margin-top: 30px;
-height: fit-content;
+height:fit-content;
 width: 100%;
 /* background-color: rebeccapurple; */
  display: flex;
@@ -995,7 +1017,21 @@ footer h2{
      font-size: .9375rem; 
   }
 }
+@media  screen and (max-width:330px) {
+   .text .txt{
+    font-size: 1.4625rem;
+    color: blueviolet;
+  }
+  .main p{
+     font-size: .7375rem; 
+  }
+}
 html{
 font-family: lato !important;
 }
+/* @media  screen and (min-width:320px) {
+   .main,.about,.contact,.services{
+    height: 150%;
+   }
+  } */
 

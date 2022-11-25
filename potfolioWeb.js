@@ -1,10 +1,11 @@
 window.addEventListener("load", () => {
-  setTimeout(type, newTextDelay+250);
-  });
-// window.addEventListener('click', () => {
+  setTimeout(type, newTextDelay + 250);
+});
+
 const text = document.querySelector('.txt');
 // text.style.color = "red"; 
 const menubar = document.querySelector('.menuBar');
+
 const navlinks = document.querySelector('nav');
 const topBar = document.querySelector('.top');
 const middleBar = document.querySelector('.middle');
