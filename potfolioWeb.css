@@ -508,7 +508,7 @@ h1{
   .main{
     padding-top: 160px;
     z-index: -566;
-   background-color: black;
+   /* background-color: black; */
     /* margin-top:-30px; */
     display: flex;
     flex-direction: column;
