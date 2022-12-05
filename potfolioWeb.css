@@ -161,13 +161,13 @@ nav ul li a:hover{
   /* margin-top:-30px; */
   display: flex;
   flex-direction: column;
-  height: fit-content;
+  height: 100%;
   width: 100vw;
   border-radius: 25px;
 }
 .main .icons{
   float: left !important;
-  height: 100%;
+  height: 70%;
   z-index: 9999;
   float:right;
   position: absolute;
