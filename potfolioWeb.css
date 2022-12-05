@@ -14,9 +14,24 @@ body{
      background-color: blueviolet;
     color: white;
     scroll-behavior: smooth;
-    display: none;
-    /* overflow: hidden; */
+    
+    /* display: none; */
+    overflow-x: hidden;
   }
+::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbarY-button{
+  background: #000;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  height: 10px;
+  background:blueviolet; 
+}
+::-webkit-scrollbar-track{
+  background:black;
+}
   .main #particles-js{
   z-index: .9;
   height: 100%;
@@ -25,7 +40,7 @@ body{
   top: 0;
   left: 0;
 }
-.main::before{
+.main::after{
   content: '';
   height: 100%;
   width: 100%;
@@ -62,6 +77,7 @@ body{
 } */
 .header{
   display: flex;
+  flex-direction: row;
    background-color:black;
     height: 80px;
     width: 100%;
@@ -69,33 +85,35 @@ body{
     border-bottom-left-radius:40px ;
     background-color: black; 
    box-shadow: 1px 2px 5px blueviolet;
-    z-index: 990;
+    z-index: 99990;
    position:fixed;
   }
   .header header{
   position:relative;
-  padding: 20px;
+  padding: 
+  20px;
    height: 80px;
-    width: 100vw;
+    width: 100%;
  display:flex;
+  flex-direction: row;
  align-items: center;
  justify-content: space-between;
  position:relative;
    
 }
 h1{
-  background-image: url(../images/Free\ Vector\ _\ Gradient\ coding\ logo\ template.jpeg);
+  background-image: url(./me.jpg);
   -webkit-background-clip: text;
    background-clip:text ;
   font-size: 48px;
   color: transparent;
   -webkit-text-stroke:2px white ;
-  font-family:fantasy;
+  font-family:cursive;
    animation: anim 6s linear infinite;
   }
   @keyframes anim{
   100%{ 
-  background-position: 4000px; 
+  background-position: 40px; 
   }
 }
 .menuBar{
@@ -103,17 +121,22 @@ h1{
 }
 .header header nav{
 display: flex;
-margin-right: 100px;
+/* margin-right: 10px;
+margin-left: 100px; */
 justify-content: center;
 align-items: center;
 }
 header nav ul{
  display: flex;
-justify-content: center;
-align-items: center;
+justify-content:space-between ;
+/* align-items: center; */
+}
+.nbsp1{
+  display: none;
 }
 nav ul li a{
-  margin: 15px;
+ 
+  margin: 2rem;
   color: white; 
   font-family:lato;
 
@@ -127,29 +150,32 @@ nav ul li a:hover{
   display: none;
 }
 .main{
-  padding-top: 160px;
+  padding-top: 120px;
   z-index: -566;
   /* background-color: black; */
-    background: linear-gradient(rgba(0,0,0,.898),rgba(0, 0, 0, .97)),url('../images/Pin\ by\ The\ Cosmicevolve\ !\ on\ 2nd\ skin\ co\ INDPIRACION\ _\ Galaxy\ wallpaper\,\ Galaxy\ painting\,\ Wallpaper\ space.jpeg');
-  background-position:bottom;
+    background: linear-gradient(rgba(0,0,0,.898),rgba(0, 0, 0, .97)),url('./Pin\ by\ The\ Cosmicevolve\ !\ on\ 2nd\ skin\ co\ INDPIRACION\ _\ Galaxy\ wallpaper\,\ Galaxy\ painting\,\ Wallpaper\ space.jpeg');
+  background-position:center;
   background-repeat: no-repeat;
   background-size: cover;
   mix-blend-mode:normal;
   /* margin-top:-30px; */
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   border-radius: 25px;
 }
 .main .icons{
+  float: left !important;
+  height: 100%;
+  z-index: 9999;
   float:right;
   position: absolute;
   /* background-color:blueviolet ; */
   display: flex;
   flex-direction: column;
   left: 85vw;
-  top: 30vh;
+  top: 30%;
 }
 .main .icons img{
    position: relative;
@@ -157,7 +183,10 @@ nav ul li a:hover{
   height: 40px;
   width: 40px;
    background-color:blueviolet;
-  margin: 40px;
+  margin: 20px;
+}
+.main .icons img:hover{
+  box-shadow: 1px 2px 13px  blueviolet;
 }
 section.main h2{
   text-align: center;
@@ -170,8 +199,8 @@ section.main h2{
    align-items: center;
   }
   .img img{
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
     object-position: top;
@@ -200,7 +229,8 @@ section.main h2{
     color: blueviolet;
   }
    .resume{
-    margin-top: 50px;
+      z-index: 999;
+    margin-top: 26px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -225,81 +255,336 @@ section.main h2{
   }
   /* .nbspActive{
     opacity: 1;
-  } */
-   .about{
+  } 
+ 
+/* about */
+.about{
+   position:relative;
    display: flex;
-   flex-direction:column;
+   flex-direction: column;
   align-items: center;
-  justify-content:space-evenly; 
+  /* justify-content:space-around;  */
   margin-top: 30px;
- padding: 0;
+  padding: 10px auto;
+  padding-top: 20px;
   color:white;
-  height:130vh;
+ height:fit-content;
   width: 100%;
   background-color: black;
   border-radius: 25px;
-} 
-
-.skillrow1{
-  height: 100px;
-  background: red;
 }
-.about h2{
-  position:absolute;
-  text-transform: uppercase;
-  margin-top:15px;
+.container{
+  /* margin-top: 30px; */
+height:80%;
+width: 100%;
+/* background-color: red; */
+ display: flex;
+justify-content: space-around;
+
+}
+.container .text{
+  height: 6rem;
+  width: 90%;
+  /* background: red; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly; 
+  /* padding: 10px; */
+  margin-top: 4rem;
+
+}
+.container .text h2{
+  font-size: 25px;
+  color: red;
+  font-family:Verdana, Geneva, Tahoma, sans-serif ;
+  margin-top: -1px !important;
+  margin-bottom: 6rem;
+}
+.about #h2{
   border-bottom: 2px solid blueviolet;
 }
-.about p{
-  position:absolute;
-  width: 80vw;
-  word-wrap: break-word;
-  word-break: break-all;
+#abouttext{
+    margin-top: 60px;
   text-align: left;
-  margin: 60px 5px;
-}
-.about .skills{
-  padding-right: 5px;
-  display:flex;
-   color: black;
-  position:absolute;
-  margin-top: -285px;
- 
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 417px;
-  height:110px;
-  border-radius: 25px;
- background-color:white;
-}
-.lagicon{
-  margin: 10px;
-float: left;
-}
-.progress{
-    text-align: right;
- 
-  border-radius: 25px;
-  /* float: right; */
-   position:absolute;
-   margin: 70px;
-  background-color: blueviolet;
-  width: 200px;
-  height: 30px;
-}
-.val{
-   border-radius: 25px;
+  font-size: 16px;
+  line-height: 20px;
+  word-break: break;
+  line-break: normal;
+  word-wrap: break-word;
+  width: 65%;
+  font-family:sans-serif;
+  word-spacing: 2px;
+  letter-spacing: 1px;
 
+}
+.container .codingSkills{
+   display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  /* justify-content:center;  */
+  padding: 10px;
+  margin: 10px; 
+   /* background-color: red;  */
+  width: 40%;
+  height: 110%;
+  margin-top: 50px;
+  
+}
+.skill{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.skill h3{
+  margin-bottom: 10px;
+  color: #f5f5f5;
+ 
+}
+.skill h3>img{
+
+  margin-right: 15px;
+  background: #000;
+  margin-bottom: 1px;
+  margin-top: 15px;
+  border-radius: 10%;
+ box-shadow:-2px -2px 13px blueviolet,
+           .5px .5px darkviolet;
+ padding: 2px;
+  object-fit: contain;
+  object-position: center;
   height: 30px;
-  width: 92%;
+  width: 30px;
+}
+
+.skill .skillbar{
+  position: relative;
+  border-radius: 15px;
+  color: white;
+top: -1px;
+  background: #222; 
+ height: 7px;
+}
+.skillbar::after{
+  content: attr(value);
+  text-align:end;
+  top: -30px;
+  right:1%;
+  position:absolute;
+}
+.skill .skillline{
+  position: relative;
+  width: 0%;
+   height: 100%;
+ background:black;
+ border-radius: 15px;
+ animation:load 2.5s .5s cubic-bezier(1,0.4,.4,1) forwards;
+}
+@keyframes load{
+  100%{
+      background:darkviolet; 
+     
+    width: 100%;
+  }
+}
+.skill .skillline::after{
+  content:'';
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%,-50%);
+  background: darkviolet;
+  position: absolute;
+}
+.codingSkills h2,.sSkills h2{
+  width: 10rem;
+  margin-top: -40px;
+  /* margin-bottom: 1000px !important; */
+  border-bottom: 2px solid darkviolet;
+}
+.container .sSkills{
+   display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  /* justify-content: space-between;  */
+  padding: 10px;
+  margin: 10px; 
+   /* background-color: red;  */
+  width: 40%;
+  height: 100%; 
+  margin-top: 50px;
+}
+.nbsp{
+  color: blueviolet;
+}
+/* .sSkills .skill{
+  margin-bottom: 100px;
+} */
+
+/* about ends */
+
+/* services */
+.services{
+  align-items: center;
+  border-radius: 25px;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  margin-top: 20px;
+  height: 100vh;
+  width: 100vw;
   background-color: black;
 }
-.second,.first,.third,.fourth{
-  
-  margin-top: 230px !important;
-  position:absolute;
+.services h2{
+  margin-top: -600px;
+  align-items: flex-start;
+  border-bottom: 2px solid blueviolet;
+  position: absolute;
+  text-align: center;
 }
+
+/* contacts */
+.contact{
+  position: relative;
+  align-items: center;
+  border-radius: 25px;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 20px;
+
+  height: 110vh;
+  width: 100vw;
+  background-color: black;
+}
+.contact h2{
+  border-bottom: 2px solid blueviolet;
+  /* position: absolute; */
+margin-top: 40px;
+}
+.cont{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px auto ;
+ margin-top: 10px;
+ /* background: red; */
+}
+.cont h2,a{
+  color:grey ;
+  font-size: 17px;
+  position:relative;
+  margin: 10px;
+}
+.contactMe{
+  width: 100%;
+}
+.contactMe form{
+  width: 90%;
+  position: relative;
+  margin: 20px auto;
+  margin-top: -1%;
+display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+}
+.contactMe input{
+  font-style:normal;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  padding-left: 10px;
+  height: 40px;
+  width: 50%;
+  margin: 20px;
+  background-color: blueviolet;
+}
+input:active,input:focus,*::placeholder{
+  font-size: 15px;
+ color: white;
+}
+input[type="submit"]{
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  width: 50%; 
+}
+textarea{
+  font-size: 20px;
+  padding: 20px;
+   color:blueviolet;
+  outline: none;
+  border: none;
+   border-radius: 15px;
+ width: 50%;
+ height: 200px;
+ resize: none; 
+}
+textarea::placeholder{
+  color: blueviolet;
+}
+.cosor{
+  height: 50px; 
+  margin-left: 5px;
+  border: 1px solid blueviolet;
+}
+.typing{
+  animation:.5s linear infinite blink;
+
+}
+@keyframes blink {
+ from{
+  opacity: 1;
+ }
+ to{
+  opacity: 0;
+ } 
+}
+
+/* footer */
+.footer{
+  padding: 10px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0,1);
+  width: 100vw;
+  height: 50vh;
+}
+.footer h2{
+  border-bottom: 2px solid blueviolet;
+}
+footer h2{
+  margin-bottom: 10px;
+    border-bottom: none !important;
+  font-size: 17px;
+}
+.footericons a img{
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: blueviolet;
+}
+.spa{
+  color: blueviolet;
+}
+.made{
+  margin-top: 20px;
+}
+  
 
 
 
@@ -370,7 +655,7 @@ float: left;
     padding-left: 5px;
     margin: 0;
     position: fixed;
-    z-index: 990;
+   z-index: 99990;
     /* 
     text-align: center; */
     justify-content: space-between;
@@ -384,10 +669,10 @@ float: left;
 h1{
   align-items: center;
   justify-content: center;
-  background-image: url(/me.jpg);
+  background-image: url(./me.jpg);
   -webkit-background-clip: text;
    background-clip:text ;
-  font-size: 48px;
+  font-size: 38px;
   color: transparent;
   -webkit-text-stroke:2px white ;
   font-family:cursive;
@@ -405,6 +690,7 @@ h1{
     z-index: 9;
     left: -200%;
     ;
+    margin: 0;
     top: 0;
     width: 80%;
     height: 100vh;
@@ -567,6 +853,7 @@ h1{
    text-align: center;
    }
   .resume a{
+  
     margin: 5px auto;
      justify-content: center;
     align-items: center;
@@ -575,7 +862,7 @@ h1{
     display:inline-flex ;
     border-radius: 15px;
     height: 40px;
-    width: 50%;
+    width: 60%;
     color: white;
     background-color:blueviolet;
   }
@@ -627,7 +914,7 @@ position: relative;
   border-radius: 25px;
 }
 .container{
-  margin-top: 30px;
+  margin-top: 20px;
 height:fit-content;
 width: 100%;
 /* background-color: rebeccapurple; */
@@ -655,7 +942,7 @@ width: 100%;
   margin-top: -1px !important;
   margin-bottom: 6rem;
 }
-.container .text p{
+#abouttext{
     margin-top: 60px;
   text-align: left;
   font-size: 16px;
@@ -667,6 +954,7 @@ width: 100%;
   font-family:sans-serif;
   word-spacing: 2px;
   letter-spacing: 1px;
+
 }
 .container .codingSkills{
    display: flex;
@@ -680,6 +968,10 @@ width: 100%;
   height: 110%;
   margin-top: 13%;
   
+}
+.skill{
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 .skill h3{
   color: #f5f5f5;
