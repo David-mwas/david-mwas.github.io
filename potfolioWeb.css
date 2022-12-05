@@ -8,7 +8,7 @@
 }
 body{
   z-index: 99999;
-     height: 100vh;
+     height: fit-content;
     scroll-snap-align: start;
     width: 100vw;
      background-color: blueviolet;
